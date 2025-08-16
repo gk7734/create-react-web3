@@ -1,6 +1,6 @@
 {
   "version": "1.0.1",
-  "name": "create-next-app",
+  "name": "create-react-web3-cli",
   "description": "Create React Web3 apps with one command",
   "keywords": [
     "react",
