@@ -3,7 +3,6 @@
 
 # Build output
 /build/
-/dist/
 
 # Optional npm cache directory
 .npm

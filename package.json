@@ -12,7 +12,7 @@
     "web3.js"
   ],
   "bin": {
-    "create-react-web3": "./bin/create-react-web3.js"
+    "create-react-web3": "./dist/bin/create-react-web3.js"
   },
   "dependencies": {
     "chalk": "^5.5.0",
