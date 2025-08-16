@@ -1,19 +1,11 @@
 <h1 align="left">Create React Web3</h1>
 
-<p align="center">
-  <b>쉽고 효율적으로 web3 프로젝트를 시작하세요</b>
-</p>
+[![npm](https://img.shields.io/npm/v/create-react-web3-cli)](https://www.npmjs.com/package/create-react-web3-cli)
+[![license](https://img.shields.io/npm/l/create-react-web3-cli)](https://github.com/gk7734/create-react-web3/blob/main/LICENSE)
 
-<p align="center">
-  [![npm](https://img.shields.io/npm/v/create-react-web3-cli)](https://www.npmjs.com/package/create-react-web3-cli)
-  [![license](https://img.shields.io/npm/l/create-react-web3-cli)](https://github.com/gk7734/create-react-web3/blob/main/LICENSE)
-</p>
+<b>쉽고 효율적으로 web3 프로젝트를 시작하세요</b>
 
-<p align="center">
-  <a href="#quick-start">빠른 시작</a>
-  |
-  <a href="#contributing">기여하기</a>
-</p>
+[빠른 시작](#quick-start) | [기여하기](#contributing)
 
 ---
 
