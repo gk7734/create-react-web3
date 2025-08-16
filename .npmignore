@@ -1,7 +1,3 @@
-bin/
-templates/
 node_modules/
-src/
-test/
 .git/
 .DS_Store
