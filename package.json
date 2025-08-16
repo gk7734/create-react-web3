@@ -1,4 +1,19 @@
 {
+  "version": "1.0.0",
+  "name": "create-next-app",
+  "description": "Create React Web3 apps with one command",
+  "keywords": [
+    "react",
+    "next",
+    "next.js",
+    "web3",
+    "solana",
+    "ether",
+    "web3.js"
+  ],
+  "bin": {
+    "create-react-web3": "./bin/create-react-web3.js"
+  },
   "dependencies": {
     "chalk": "^5.5.0",
     "execa": "^9.6.0",
@@ -6,5 +21,7 @@
     "inquirer": "^12.9.2",
     "ora": "^8.2.0"
   },
-  "type": "module"
+  "type": "module",
+  "author": "gk7734",
+  "license": "MIT"
 }
