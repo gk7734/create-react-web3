@@ -127,7 +127,17 @@ async function main() {
                 cmdArgs = ['create-next-app@latest', ...args];
         }
 
-        await execa(cmd, cmdArgs, { stdio: 'pipe' });
+        const spinner = ora("Creating Next.js app...").start();
+        spinner.color = "blue";
+
+        try {
+            await execa(cmd, cmdArgs, { stdio: 'pipe' });
+            spinner.succeed('Next.js app created successfully!');
+        } catch (err) {
+            spinner.fail('Create failed!');
+        }
+    } else {
+
     }
 }
 
