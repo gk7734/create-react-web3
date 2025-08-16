@@ -1,11 +1,13 @@
-<h1 align="left">Create React Web3</h1>
+# Create React Web3
 
 [![npm](https://img.shields.io/npm/v/create-react-web3-cli)](https://www.npmjs.com/package/create-react-web3-cli)
 [![license](https://img.shields.io/npm/l/create-react-web3-cli)](https://github.com/gk7734/create-react-web3/blob/main/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/gk7734/create-react-web3)](https://github.com/gk7734/create-react-web3/issues)
+[![GitHub Release](https://img.shields.io/github/release/gk7734/create-react-web3)](https://github.com/gk7734/create-react-web3/releases)
 
-<b>쉽고 효율적으로 web3 프로젝트를 시작하세요</b>
+**쉽고 효율적으로 web3 프로젝트를 시작하세요**
 
-[빠른 시작](#quick-start) | [기여하기](#contributing)
+[빠른 시작](#빠른-시작) | [기여하기](#기여하기)
 
 ---
 
@@ -18,8 +20,8 @@ Create React Web3은 web3 개발 입문자부터 전문가까지 모두를 위�
 
 ## 빠른 시작
 
-npx create-react-web3-cli  
-cd my-app  
+npx create-react-web3-cli
+cd my-app
 npm run dev
 
 ---
@@ -50,14 +52,3 @@ npm run dev
 ## 라이선스
 
 MIT
-
----
-
-<p align="center">
-  <a href="https://github.com/gk7734/create-react-web3/issues">
-    <img src="https://img.shields.io/github/issues/gk7734/create-react-web3" alt="GitHub Issues" />
-  </a>
-  <a href="https://github.com/gk7734/create-react-web3/releases">
-    <img src="https://img.shields.io/github/release/gk7734/create-react-web3" alt="GitHub Release" />
-  </a>
-</p>
