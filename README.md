@@ -3,24 +3,23 @@
 [![npm](https://img.shields.io/npm/v/create-react-web3-cli)](https://www.npmjs.com/package/create-react-web3-cli)
 [![license](https://img.shields.io/npm/l/create-react-web3-cli)](https://github.com/gk7734/create-react-web3/blob/main/LICENSE)
 [![GitHub Issues](https://img.shields.io/github/issues/gk7734/create-react-web3)](https://github.com/gk7734/create-react-web3/issues)
-[![GitHub Release](https://img.shields.io/github/release/gk7734/create-react-web3)](https://github.com/gk7734/create-react-web3/releases)
 
-**쉽고 효율적으로 web3 프로젝트를 시작하세요**
+**Easily and efficiently start your web3 project**
 
-[빠른 시작](#빠른-시작) | [기여하기](#기여하기)
-
----
-
-## 소개
-
-Create React Web3은 web3 개발 입문자부터 전문가까지 모두를 위해 설계된 도구입니다.  
-복잡한 블록체인 환경 설정 없이 간편하게 React 기반의 web3 애플리케이션을 시작할 수 있도록 도와줍니다.
+[Quick Start](#quick-start) | [Contributing](#contributing)
 
 ---
 
-## 빠른 시작
+## Introduction
 
-```curl
+**Create React Web3** is a tool designed for everyone — from beginners entering the world of web3 to experienced developers.  
+It helps you quickly bootstrap a React-based web3 application without the hassle of complex blockchain setup.
+
+---
+
+## Quick Start
+
+```
 npx create-react-web3-cli .
 cd my-app
 npm run dev
@@ -28,29 +27,29 @@ npm run dev
 
 ---
 
-## 주요 기능
+## Key Features
 
-- 🚀 **신속한 개발환경 구축**
-- 🌐 **직관적인 파일 기반 라우팅 제공**
-- 📦 **최적화된 번들링 및 성능 개선**
-- 🎨 **다양한 스타일링 옵션 지원 (CSS, Tailwind, Sass 등)**
-- 🔌 **확장 가능한 플러그인 아키텍처**
-
----
-
-## 문제 및 이슈
-
-버그나 개선사항은 [Issues](https://github.com/gk7734/create-react-web3/issues)에 남겨주세요.
+- 🚀 **Fast project setup**
+- 🌐 **Intuitive file-based routing**
+- 📦 **Optimized bundling & performance**
+- 🎨 **Multiple styling options (CSS, Tailwind, Sass, etc.)**
+- 🔌 **Extensible plugin architecture**
 
 ---
 
-## 기여하기
+## Issues
 
-기여를 환영합니다!  
-자세한 내용은 [CONTRIBUTING.md](./CONTRIBUTING.md) 문서를 확인해주세요.
+If you encounter any bugs or have suggestions for improvement, please report them on the [Issues page](https://github.com/gk7734/create-react-web3/issues).
 
 ---
 
-## 라이선스
+## Contributing
+
+Contributions are welcome!  
+For more details, please check the [CONTRIBUTING.md](https://github.com/gk7734/create-react-web3/blob/main/CONTRIBUTORS.md) document.
+
+---
+
+## License
 
 MIT
