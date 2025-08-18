@@ -20,9 +20,11 @@ Create React Web3은 web3 개발 입문자부터 전문가까지 모두를 위�
 
 ## 빠른 시작
 
-npx create-react-web3-cli
+```curl
+npx create-react-web3-cli .
 cd my-app
 npm run dev
+```
 
 ---
 

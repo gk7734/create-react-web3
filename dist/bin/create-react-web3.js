@@ -3,6 +3,8 @@
 import chalk from 'chalk';
 import { createNextApp, createReactApp, promptUser } from "./helpers/index.js";
 
+const defalutProjectName = process.argv[2];
+
 async function main() {
     const {
         framework,
@@ -16,7 +18,7 @@ async function main() {
         useImportAlias,
         useImportAliasValue,
         packageManager
-    } = await promptUser();
+    } = await promptUser(defalutProjectName);
 
     if (framework === 'Next.js') {
         await createNextApp({

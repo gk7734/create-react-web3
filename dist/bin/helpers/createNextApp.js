@@ -65,7 +65,7 @@ export default async function createNextApp({
 
     try {
         await execa(cmd, cmdArgs, { stdio: "pipe" });
-        spinner.succeed("Next.js app created successfully!");
+        spinner.succeed(chalk.bold("Next.js app created successfully!"));
     } catch (err) {
         spinner.fail("Create failed!");
         console.error(err);

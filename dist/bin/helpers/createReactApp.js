@@ -32,13 +32,13 @@ export default async function createReactApp({projectName, packageManager}) {
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = dirname(__filename);
 
-        const templatePath = resolve(__dirname, '../../templates', 'react');
+        const templatePath = resolve(__dirname, '../../templates', 'react-hardhat');
         const targetPath = resolve(process.cwd(), projectName);
 
         await copy(templatePath, targetPath);
 
         await execa(cmd, args, {cwd: targetPath, stdio: 'pipe'});
-        spinner.succeed('React app created successfully!');
+        spinner.succeed(chalk.bold('React app created successfully!'));
     } catch (err) {
         spinner.fail('Create failed!');
         console.error(err);
