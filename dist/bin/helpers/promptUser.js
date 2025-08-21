@@ -66,7 +66,7 @@ const commonQuestions = [
         type: 'list',
         name: 'web3',
         message: 'Which Web3 blockchain platform would you like to use?',
-        choices: ['Ethereum (eth)', 'Solana (sol)', 'XRP Ledger (xrpl)'],
+        choices: ['Ethereum (eth)', 'BNB (bnb)', 'Solana (sol)', 'XRP Ledger (xrpl)'],
     },
 ];
 

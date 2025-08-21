@@ -17,6 +17,7 @@ async function main() {
         useTurbopack,
         useImportAlias,
         useImportAliasValue,
+        web3,
         packageManager
     } = await promptUser(defalutProjectName);
 
@@ -34,7 +35,7 @@ async function main() {
             packageManager
         });
     } else {
-        await createReactApp({ projectName, packageManager });
+        await createReactApp({ projectName, web3, packageManager });
     }
 
     console.log(chalk.green.bold('\nDone! 🎉 Project setup is complete.\n'));
