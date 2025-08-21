@@ -40,17 +40,17 @@ export default async function createReactApp({projectName, web3, packageManager}
         await copy(templatePath, targetPath);
         spinner.succeed(chalk.bold("React app created successfully!"));
 
-        const spinnerBlockchain = ora(`⏳ Installing packages in blockchain folder`).start();
+        const spinnerBlockchain = ora(`⏳Installing packages in blockchain folder`).start();
         const blockchainPath = resolve(targetPath, 'blockchain');
         await execa(cmd, args, {cwd: blockchainPath, stdio: 'pipe'});
-        spinnerBlockchain.succeed(chalk.green("✅ Installed packages in blockchain folder"));
+        spinnerBlockchain.succeed(chalk.green("Installed packages in blockchain folder"));
 
-        const spinnerClient = ora(`⏳ Installing packages in client folder`).start();
+        const spinnerClient = ora(`⏳Installing packages in client folder`).start();
         const clientPath = resolve(targetPath, 'client');
         await execa(cmd, args, {cwd: clientPath, stdio: 'pipe'});
-        spinnerClient.succeed(chalk.green("✅ Installed packages in client folder"));
+        spinnerClient.succeed(chalk.green("Installed packages in client folder"));
 
-        spinner.succeed(chalk.bold("✅ React app created successfully!"));
+        spinner.succeed(chalk.bold("React app created successfully!"));
     } catch (err) {
         spinner.fail('Create failed!');
         console.error(err);
