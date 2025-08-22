@@ -19,9 +19,23 @@ It helps you quickly bootstrap a React-based web3 application without the hassle
 
 ## Quick Start
 
-```
+```bash
 npx create-react-web3-cli .
 cd my-app
+
+# Using Example
+# Blockchain Setting
+cd blockchain
+npx hardhat compile
+npx hardhat keystore set [network-name]_RPC_URL
+npx hardhat keystore set [network-name]_PRIVATE_KEY
+npx hardhat run scripts/deploy.ts --network [network-name]
+
+# Client Setting
+cd ../client
+cd src/utils/
+# config.ts -> Network RPC Add
+# contract.ts -> your Contract Address Add
 npm run dev
 ```
 
@@ -46,7 +60,7 @@ If you encounter any bugs or have suggestions for improvement, please report the
 ## Contributing
 
 Contributions are welcome!  
-For more details, please check the [CONTRIBUTING.md](https://github.com/gk7734/create-react-web3/blob/main/CONTRIBUTORS.md) document.
+For more details, please check the [CONTRIBUTING.md](https://github.com/gk7734/create-react-web3/blob/main/CONTRIBUTING.md) document.
 
 ---
 

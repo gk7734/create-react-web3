@@ -66,7 +66,21 @@ const commonQuestions = [
         type: 'list',
         name: 'web3',
         message: 'Which Web3 blockchain platform would you like to use?',
-        choices: ['Ethereum (eth)', 'BNB (bnb)', 'Solana (sol)', 'XRP Ledger (xrpl)'],
+        choices: [
+            'Ethereum (eth)',
+            'BNB (bnb)',
+            'Solana (sol) - In Development',
+            'XRP Ledger (xrpl) - In Development'
+        ],
+    },
+    {
+        type: 'list',
+        name: 'example',
+        message: 'Which example would you like to use?',
+        choices: [
+            'No example (smart fresh)',
+            'Use example template',
+        ],
     },
 ];
 
@@ -83,7 +97,7 @@ export default async function promptUser(defalutProjectName) {
             type: 'list',
             name: 'framework',
             message: 'Which framework would you like to create?',
-            choices: ['React (vite)', 'Next.js'],
+            choices: ['React (vite)', 'Next.js - In Development'],
         },
         {
             type: 'confirm',
