@@ -70,7 +70,7 @@ h2.counter { font-size: 32px; margin: 20px 0; }
 }
 .debug div {
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: light-dark(#f0f0f0, #505050);
   margin: 10px 0;
   border-radius: 5px;
 }

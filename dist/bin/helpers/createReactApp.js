@@ -34,23 +34,39 @@ export default async function createReactApp({projectName, web3, packageManager}
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = dirname(__filename);
 
-        const templatePath = resolve(__dirname, '../../templates', `react-hardhat-${web3.split(" ")[1].replace(/[()]/g, "")}`);
-        const targetPath = resolve(process.cwd(), projectName);
+        if (web3 === 0 || web3 === 1) {
+            const templatePath = resolve(__dirname, '../../templates', `react-hardhat-${web3===0?'eth':'bnb'}`);
+            const targetPath = resolve(process.cwd(), projectName);
 
-        await copy(templatePath, targetPath);
-        spinner.succeed(chalk.bold("React app created successfully!"));
+            await copy(templatePath, targetPath);
+            spinner.succeed(chalk.bold("React app copied successfully!"));
 
-        const spinnerBlockchain = ora(`⏳Installing packages in blockchain folder`).start();
-        const blockchainPath = resolve(targetPath, 'blockchain');
-        await execa(cmd, args, {cwd: blockchainPath, stdio: 'pipe'});
-        spinnerBlockchain.succeed(chalk.green("Installed packages in blockchain folder"));
+            const spinnerBlockchain = ora(`⏳ Installing packages in blockchain folder`).start();
+            const blockchainPath = resolve(targetPath, 'blockchain');
+            await execa(cmd, args, {cwd: blockchainPath, stdio: 'pipe'});
+            spinnerBlockchain.succeed(chalk.green("Installed packages in blockchain folder"));
 
-        const spinnerClient = ora(`⏳Installing packages in client folder`).start();
-        const clientPath = resolve(targetPath, 'client');
-        await execa(cmd, args, {cwd: clientPath, stdio: 'pipe'});
-        spinnerClient.succeed(chalk.green("Installed packages in client folder"));
+            const spinnerClient = ora(`⏳ Installing packages in client folder`).start();
+            const clientPath = resolve(targetPath, 'client');
+            await execa(cmd, args, {cwd: clientPath, stdio: 'pipe'});
+            spinnerClient.succeed(chalk.green("Installed packages in client folder"));
 
-        spinner.succeed(chalk.bold("React app created successfully!"));
+            spinner.succeed(chalk.bold("React app created successfully!"));
+        }
+
+        if (web3 === 3) {
+            const templatePath = resolve(__dirname, '../../templates', `react-xrpl`);
+            const targetPath = resolve(process.cwd(), projectName);
+
+            await copy(templatePath, targetPath);
+            spinner.succeed(chalk.bold("React app copied successfully!"));
+
+            const spinnerClient = ora(`⏳ Installing packages in xrpl folder`).start();
+            await execa(cmd, args, {cwd: targetPath, stdio: 'pipe'});
+            spinnerClient.succeed(chalk.green("Installed packages in client folder"));
+
+            spinner.succeed(chalk.bold("React app created successfully!"));
+        }
     } catch (err) {
         spinner.fail('Create failed!');
         console.error(err);

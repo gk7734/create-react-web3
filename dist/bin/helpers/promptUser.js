@@ -67,10 +67,10 @@ const commonQuestions = [
         name: 'web3',
         message: 'Which Web3 blockchain platform would you like to use?',
         choices: [
-            'Ethereum (eth)',
-            'BNB (bnb)',
-            'Solana (sol) - In Development',
-            'XRP Ledger (xrpl) - In Development'
+            { name: 'Ethereum (eth)', value: 0 },
+            { name: 'BNB (bnb)', value: 1 },
+            { name: 'Solana (sol) - In Development', value: 2 },
+            { name: 'XRP Ledger (xrpl) - In Development', value: 3 },
         ],
     },
     {
