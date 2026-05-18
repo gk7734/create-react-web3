@@ -7,7 +7,7 @@
  * @date 2025
  */
 
-import {useEffect, useState, useCallback, useMemo} from 'react'
+import {useEffect, useCallback, useMemo} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import hardhatLogo from './assets/hardhat.svg'
@@ -42,12 +42,6 @@ function App() {
   const {disconnect} = useDisconnect();
 
   /**
-   * @state {number} count - Local state for counter value display
-   * @description Mirrors the blockchain counter value for immediate UI feedback
-   */
-  const [count, setCount] = useState<number>(0);
-
-  /**
    * @hook useReadContract
    * @description Reads counter value from smart contract with optimized caching
    * @param {Object} config - Configuration object for contract reading
@@ -79,24 +73,16 @@ function App() {
   });
 
   /**
-   * @effect Counter Value Synchronization
-   * @description Synchronizes blockchain counter value with local state
-   * @param {bigint|number|undefined} counterValue - Raw value from blockchain
-   * @dependency counterValue - Triggers when contract value changes
+   * @memo count
+   * @description Counter value derived directly from the contract read.
+   * Deriving the value instead of mirroring it into local state avoids an
+   * unnecessary effect and the cascading renders it would trigger.
+   * @returns {number} Current counter value (0 when unavailable or invalid)
    */
-  useEffect(() => {
-    if (counterValue !== undefined && counterValue !== null) {
-      const newCount = typeof counterValue === 'bigint'
-          ? Number(counterValue)
-          : Number(counterValue);
-
-      if (!isNaN(newCount)) {
-        setCount(newCount);
-      } else {
-        console.error("Invalid counterValue:", counterValue);
-        setCount(0);
-      }
-    }
+  const count = useMemo<number>(() => {
+    if (counterValue === undefined || counterValue === null) return 0;
+    const parsed = Number(counterValue);
+    return Number.isNaN(parsed) ? 0 : parsed;
   }, [counterValue]);
 
   /**

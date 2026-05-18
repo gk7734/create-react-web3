@@ -68,6 +68,6 @@ export default async function createNextApp({
         spinner.succeed(chalk.bold("Next.js app created successfully!"));
     } catch (err) {
         spinner.fail("Create failed!");
-        console.error(err);
+        throw err;
     }
 }

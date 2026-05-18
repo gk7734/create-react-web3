@@ -45,6 +45,9 @@ Thumbs.db
 # Misc
 *.log
 
+# oh-my-claudecode state
+.omc/
+
 # Mac System files
 .AppleDouble
 .LSOverride

@@ -70,7 +70,7 @@ const commonQuestions = [
             { name: 'Ethereum (eth)', value: 0 },
             { name: 'BNB (bnb)', value: 1 },
             { name: 'Solana (sol) - In Development', value: 2 },
-            { name: 'XRP Ledger (xrpl) - In Development', value: 3 },
+            { name: 'XRP Ledger (xrpl)', value: 3 },
         ],
     },
     {
@@ -81,17 +81,18 @@ const commonQuestions = [
             'No example (smart fresh)',
             'Use example template',
         ],
+        default: 'Use example template',
     },
 ];
 
-export default async function promptUser(defalutProjectName) {
+export default async function promptUser(defaultProjectName) {
     const initialQuestions = [
         {
             type: 'input',
             name: 'projectName',
             message: 'What is your project named?',
             default: 'my-app',
-            when: () => !defalutProjectName
+            when: () => !defaultProjectName
         },
         {
             type: 'list',
@@ -99,22 +100,12 @@ export default async function promptUser(defalutProjectName) {
             message: 'Which framework would you like to create?',
             choices: ['React (vite)', 'Next.js - In Development'],
         },
-        {
-            type: 'confirm',
-            name: 'useRecommended',
-            message: 'Use recommended default options optimized for this framework?',
-            default: true,
-        },
     ];
 
     const answers = await inquirer.prompt(initialQuestions);
 
-    if (defalutProjectName && !answers.projectName) {
-        if (defalutProjectName === '.') {
-            answers.projectName = 'my-app';
-        } else {
-            answers.projectName = defalutProjectName;
-        }
+    if (defaultProjectName && !answers.projectName) {
+        answers.projectName = defaultProjectName === '.' ? 'my-app' : defaultProjectName;
     }
 
     if (answers.framework === 'Next.js') {

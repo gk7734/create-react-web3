@@ -8,14 +8,16 @@ import { Wallet, Client, type SubmittableTransaction } from "xrpl";
 
 import { Buffer } from "buffer";
 
+// Created once at module scope so every render and handler shares a single
+// connection instead of allocating a new Client on each render.
+const client = new Client("wss://s.altnet.rippletest.net:51233");
+
 function App() {
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [isConnected, setIsConnected] = useState(false);
   const [isPending, setIsPending] = useState(false);
   const [count, setCount] = useState(0);
   const [writeError, setWriteError] = useState<Error | null>(null);
-
-  const client = new Client("wss://s.altnet.rippletest.net:51233");
 
   useEffect(() => {
     async function init() {
@@ -71,9 +73,9 @@ function App() {
       await client.submitAndWait(signed.tx_blob);
 
       setCount(newCount);
-    } catch (err: any) {
+    } catch (err) {
       console.error(err);
-      setWriteError(err);
+      setWriteError(err instanceof Error ? err : new Error(String(err)));
     }
 
     setIsPending(false);
