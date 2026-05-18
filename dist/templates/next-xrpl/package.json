@@ -1,0 +1,28 @@
+{
+  "name": "next-xrpl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "next": "^15.5.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "xrpl": "^4.6.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^25.8.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^15.5.0",
+    "typescript": "^5.7.0"
+  }
+}

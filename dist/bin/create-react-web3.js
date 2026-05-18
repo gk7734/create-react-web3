@@ -32,35 +32,11 @@ function printBanner() {
 async function main() {
     printBanner();
 
-    const {
-        framework,
-        projectName,
-        useTypeScript,
-        useESLint,
-        useTailwind,
-        useSrcDirectory,
-        useAppRouter,
-        useTurbopack,
-        useImportAlias,
-        useImportAliasValue,
-        web3,
-        example,
-        packageManager
-    } = await promptUser(defaultProjectName);
+    const { framework, projectName, web3, example, packageManager } =
+        await promptUser(defaultProjectName);
 
     if (framework === 'Next.js') {
-        await createNextApp({
-            projectName,
-            useTypeScript,
-            useESLint,
-            useTailwind,
-            useSrcDirectory,
-            useAppRouter,
-            useTurbopack,
-            useImportAlias,
-            useImportAliasValue,
-            packageManager
-        });
+        await createNextApp({ projectName, web3, example, packageManager });
     } else {
         await createReactApp({ projectName, web3, example, packageManager });
     }
